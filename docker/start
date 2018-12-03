@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -Eeuo pipefail
+
+function shell {
+    /bin/bash
+}
+trap shell EXIT
+
+cid="${1:-}"
+if [ "$cid" != "" ]; then
+    cd "$(docker inspect "$cid" | jq .[0].GraphDriver.Data.MergedDir -j)"
+fi

@@ -1,0 +1,20 @@
+#!/bin/bash
+
+set -Eeuo pipefail
+
+kversion=v"$(uname -r | sed -E 's/\+*$//')"
+mkdir /tmp/kernel-dl
+pushd /tmp/kernel-dl > /dev/null
+    wget "https://chromium.googlesource.com/chromiumos/third_party/kernel/+archive/$kversion.tar.gz"
+    mkdir src
+    tar xzf "$kversion.tar.gz" -C src
+
+    pushd src > /dev/null
+        gunzip < /proc/config.gz > .config
+        make oldconfig
+        make prepare
+        make scripts
+        echo "export BPFTRACE_KERNEL_SOURCE=\"$PWD\""
+        echo "export BCC_KERNEL_SOURCE=\"$PWD\""
+    popd > /dev/null
+popd > /dev/null
