@@ -10,7 +10,7 @@ import (
 	_ "k8s.io/client-go/plugin/pkg/client/auth/gcp"
 	"k8s.io/client-go/tools/clientcmd"
 
-	"github.com/jasonkeene/k8s-towel/pkg"
+	"github.com/jasonkeene/towel/pkg"
 )
 
 var errBadCommand = errors.New("please specify a subcommand [apply, exec, delete]")

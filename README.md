@@ -6,7 +6,7 @@
 ## Installation
 
 ```
-go get github.com/jasonkeene/k8s-towel/...
+go get github.com/jasonkeene/towel/...
 ```
 
 ## Usage
