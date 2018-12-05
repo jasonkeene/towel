@@ -3,6 +3,12 @@
 >
 > -- <cite>Douglas Adams</cite>
 
+## Getting Started Tutorial
+
+If you are new to linux tracing I highly recommend you read our [Getting
+Started Tutorial]. It will walk you through step-by-step how to get started
+tracing your programs running in a GKE cluster.
+
 ## Installation
 
 ```
@@ -25,29 +31,31 @@ kubectl towel delete
 
 ## Things You Can Do with the Towel
 
-### bpftrace
+### Run bpftrace
 
 ```
 bpftrace -l
 bpftrace -e 'BEGIN { printf("Hello, World!\n"); }'
 ```
 
-### bcc tools
-
-TODO: improve examples
+### Run BCC Tools
 
 ```
 opensnoop
+tcpaccept
+tcpconnect
 ```
 
-### bcc
+<!--
+### Write Your Own BCC Tools
 
 TODO: add example
 
 ```
 ```
+-->
 
-### docker
+### Talk to the Docker Daemon
 
 ```
 docker ps
@@ -64,3 +72,5 @@ download-chromium-os-kernel-source
 
 It will print out the environment variables you need to export to allow BCC
 and bpftrace to know where to look for the sources.
+
+[Getting Started Tutorial]: docs/tutorial.md
