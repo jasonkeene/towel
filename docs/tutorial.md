@@ -1,4 +1,6 @@
 
+# Getting Started Tutorial
+
 This guide is intended for those who are new to tracing in Linux. It covers
 using the towel container to do various tasks releated to measuring
 applications. It is structured around kubernetes and, specifically, GKE since
