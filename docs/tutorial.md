@@ -24,7 +24,7 @@ If you do not have the go toolchain you can download a binary release from the
 
 ```
 # download the binary
-wget <release_binary_url>
+wget -O kubectl-towel <release_binary_url>
 
 # set the permissions bit
 chmod +x kubectl-towel
