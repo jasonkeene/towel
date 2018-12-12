@@ -209,6 +209,8 @@ collected. The amazing thing about this is that we did it without any help
 from nginx. nginx did not have to allow us to do this by adding
 instrumentation to their code. This is very powerful!
 
+To learn more about `bpftrace` visit [their docs].
+
 ## BCC Tools Demo
 
 The towel pod also includes `libbcc.so` and all the BCC tools. Lets play
@@ -263,3 +265,4 @@ gcloud container clusters delete towel-temp --zone us-central1-a
 [releases page]: https://github.com/jasonkeene/towel/releases
 [kubernetes documentation]: https://kubernetes.io/docs/tasks/tools/install-kubectl/
 [BCC docs]: https://github.com/iovisor/bcc#tools
+[their docs]: https://github.com/iovisor/bpftrace#bpftrace
