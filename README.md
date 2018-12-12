@@ -46,14 +46,22 @@ tcpaccept
 tcpconnect
 ```
 
-<!--
 ### Write Your Own BCC Tools
 
-TODO: add example
+```
+python -c '
 
+from bcc import BPF
+BPF(text=r"""
+int kprobe__sys_clone(void *ctx)
+{
+    bpf_trace_printk("Hello, World!\n");
+    return 0;
+}
+""").trace_print()
+
+'
 ```
-```
--->
 
 ### Talk to the Docker Daemon
 
