@@ -1,3 +1,8 @@
+
+**Note:** A good deal of the functionality provided here is now available
+via [iovisor/kubectl-trace](https://github.com/iovisor/kubectl-trace).
+Check it out!
+
 > A towel, it says, is about the most massively useful thing an interstellar
 > hitchhiker can have.
 >
